@@ -5,6 +5,7 @@ const dates = document.querySelectorAll(".date");
 const subjects = document.querySelectorAll(".subjects");
 const descriptions = document.querySelectorAll(".description");
 const buttons = document.querySelectorAll(".read-more")
+const moveButtons = document.querySelector(".btn-container").children;
 
 
 /** URL FORMATTING FOR FETCH REQUEST */
@@ -61,7 +62,12 @@ async function fetchData(args){
     return results;                         
 }
 
-async function loadResults(){
+
+/**
+ *  Loads Results into html file
+ */
+async function loadResults(){                               //parseURL RUNS, OUTPUT USED AS INPUT FOR fetchData. Output stored as currentPageResult
+
     let currentPageResult = await fetchData(parseURL());    //GRAB USEFUL RESULTS FROM ABOVE FUNCTION
     //console.log(currentPageResult);                       //MUST AWAIT OR FOR LOOP WILL RUN BEFORE DATA IS RECIEVED
 
@@ -97,3 +103,15 @@ async function loadResults(){
 }
 
 window.onload = loadResults; //LOAD THE PAGE ON PAGE LOAD
+
+moveButtons[0].addEventListener("click", function(){
+    let prev = parseInt(parseURL()[2])-1
+    //console.log(prev)
+    if(prev>0){window.location.assign(window.location.href.replace("p=" + parseURL()[2], "p=" + prev))}
+})
+
+moveButtons[1].addEventListener("click", function(){
+    let next = parseInt(parseURL()[2])+1
+    //console.log(next)
+    if(next>0){window.location.assign(window.location.href.replace("p=" + parseURL()[2], "p=" + next))}
+})
