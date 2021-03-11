@@ -62,10 +62,12 @@ async function fetchData(args){
     return results;                         
 }
 
+
 /**
  *  Loads Results into html file
  */
 async function loadResults(){                               //parseURL RUNS, OUTPUT USED AS INPUT FOR fetchData. Output stored as currentPageResult
+
     let currentPageResult = await fetchData(parseURL());    //GRAB USEFUL RESULTS FROM ABOVE FUNCTION
     //console.log(currentPageResult);                       //MUST AWAIT OR FOR LOOP WILL RUN BEFORE DATA IS RECIEVED
 
