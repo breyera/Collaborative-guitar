@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Philosophy Quiz</title>
+   <!--  <link rel="stylesheet" href=""> -->
+</head>
+<body>
+    <div class="container">
+
+        <div id="starterDiv">
+            <h2>Click the "Start" button to begin the Quiz!</h2>
+        <button id="startbtn">Start Quiz</button>
+        <button id="startPageHiscore" onclick="showHiscore()">HiScores</button>
+        </div>
+
+        <div id="quiz">
+            <div id="quizHead">Select an answer </div>
+                <div id="questions"><p>Questions Placeholder</p></div>
+                    <button id="a" onclick="checkAnswer('a')">A</button>
+                    <button id="b" onclick="checkAnswer('b')">B</button>
+                    <button id="c" onclick="checkAnswer('c')">C</button>
+                    <button id="d" onclick="checkAnswer('d')">D</button>
+                <div id="results"></div>
+        </div>
+        <div id="over">
+
+            <div id="endScore"></div>
+            <input type="text" size = "50" placeholder="Enter your name" name="playerName" id="playerName"/>
+            <button id="submit">Submit Score</button>
+        </div>
+        <div id=hiscoreContainer>
+        <div id="hiscoreDiv">
+            <div id="hiscore-header">
+                <h3>Player Name</h3>
+                <h3>Score</h3>
+            </div>
+            <div id = "hiscoreIntl"></div>
+            <div id = "hiscoreShownScore"></div>
+        </div>
+        <div id="gameOverButton">
+            <button id="tryAgain" onclick="replayQuiz()">Try Again</button>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
