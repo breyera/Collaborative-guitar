@@ -25,3 +25,18 @@
   // WikiMedia things
   // Reframe qAPI as fetch with header, not AJAX call
 /** ---------------------------- */
+
+
+const nav_quiz = $("#quiz");
+const nav_profiles = $("#profiles");
+const nav_qotd = $("#qotd");
+
+const carousel = $(".quote-carousel");
+const carouselQuote = $(".quote");
+
+
+
+
+
+
+
