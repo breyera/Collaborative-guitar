@@ -325,10 +325,13 @@ ul {
     }
     
     .owl-carousel .owl-nav {
-      left: 50%;
-      top: 10%;
-      transform: translateX(-50%);
-      margin: 0;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
     
     .owl-carousel .owl-nav svg {
