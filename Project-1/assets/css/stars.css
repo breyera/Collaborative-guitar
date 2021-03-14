@@ -1,7 +1,36 @@
-html {
-    height: 100%;
-    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-    overflow: scroll;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100%;
+  width: 100%;
+  font: normal 16px Arial, Helvetica, sans-serif;
+  line-height: 1.6em;
+  color: #FFF;
+  margin:0;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+a:visited {
+  color: inherit;
+}
+ul {
+  list-style-type: none;
+}
+
+.hero {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
   }
 
   #stars {
@@ -64,25 +93,4 @@ html {
     }
   }
 
-.header{
-    color: #FFF;
-    font-style: Luminari, fantasy
-}
 
-nav{
-    border-bottom: solid white;
-}
-
-ul{
-    text-align: right;
-    list-style: none;
-}
-
-.phil{
-    text-align: center;
-    color:#FFF
-}
-
-.quotes{
-    color:#FFF
-}
