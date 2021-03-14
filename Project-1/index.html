@@ -5,12 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Unanswered Questions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="assets/css/tailwind.css">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/stars.css">
-    <!-- <link rel="stylesheet" href="assets/css/tailwind.css"> -->
 
 </head>
 <body>
+    <main>
     <div id='stars'></div>
     <div id='stars2'></div>
     <div id='stars3'></div>
@@ -20,7 +23,7 @@
             <h1>What is Philosophy?</h1>
             <div class="rw-wrapper">
                 <h2 class="rw-sentence">
-                    <span>Philosophy is a way of thinking about certain subjects such as:</span>
+                    <span>Philosophy is a way of thinking about certain subjects such as</span>
                     <div class="rw-words rw-words-1">
                             <span>ethics</span>
                             <span>thought</span>
@@ -44,32 +47,64 @@
             </ul>
         </nav>
     </header>
-    
-</body>
+</main>
+
 <!-- We are going to put these qoutes in courousel  -->
-<p>A way of thinking about certian subject such as ethics, thought, existence, time, meaning and value</p>
 
-<div class="quotes">  
-    <div>
-   <q class="quote1">Quote 1</q>
-    <p><a href="wikipageofPhilosppher"> Auhtor</a></p>
-    </div>
-
-    <div>
-        <q class="quote2">Quote 2</q>
-        <p><a href="wikipageofPhilosppher"> Auhtor</a></p>
-    </div>
-
-    <div>
-        <q class="quote3">quote 3</q>
-        <p><a href="wikipageofPhilosppher"> Auhtor</a></p>
-    </div>    
-
-
-
+<div class="owl-carousel owl-theme full-screen">
+    <div class="owl-slide flex items-center justify-center cover" style="background-image: url();">
+      <div class="container my-width">
+        <div class="flex-row items-center">
+          <div class="grid-cols-10 md:grid-cols-6 static">
+            <div class="owl-slide-text w-8/12">
+              <h2 class="owl-slide-animated owl-slide-title">The bedding was hardly able to cover it</h2>
+              <div class="owl-slide-animated owl-slide-subtitle mb-4">
+                One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin.
+              </div>
+              <a class="btn btn-primary owl-slide-animated owl-slide-cta" href="#" target="_blank" role="button">See Original Image</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!--/owl-slide-->
+  
+    <div class="owl-slide flex items-center justify-center cover" style="background-image: url();">
+      <div class="container my-width">
+        <div class="flex-row items-center">
+          <div class="grid-cols-10 md:grid-cols-6 static">
+            <div class="owl-slide-text w-8/12">
+              <h2 class="owl-slide-animated owl-slide-title">Samsa was a travelling salesman.</h2>
+              <div class="owl-slide-animated owl-slide-subtitle mb-3">
+                It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window at the dull weather.
+              </div>
+              <a class="btn btn-primary owl-slide-animated owl-slide-cta" href="#" target="_blank" role="button">See Original Image</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!--/owl-slide-->
+  
+    <div class="owl-slide flex items-center justify-center cover" style="background-image: url();">
+      <div class="container my-width">
+        <div class="flex-row items-center">
+          <div class="grid-cols-10 md:grid-cols-6 static">
+            <div class="owl-slide-text w-8/12">
+              <h2 class="owl-slide-animated owl-slide-title">A collection of textile samples.</h2>
+              <div class="owl-slide-animated owl-slide-subtitle mb-3">
+                He lay on his armour-like back, and if he lifted his head a little he could see his brown belly.
+              </div>
+              <a class="btn btn-primary owl-slide-animated owl-slide-cta" href="#" target="_blank" role="button">See Original Image</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!--/owl-slide-->
+  </div>
 
 
     <script src="assets/lib/JQ/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
+    <script src="assets/js/quote-carousel.js"></script>
     <script src="assets/js/Script.js"></script>
 </body>
 </html>
