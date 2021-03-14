@@ -30,7 +30,7 @@ nav_qotd.on("click", function(e){
 nav_home.on("click", function(e){
 	e.preventDefault();
 	window.location.assign(URL_HOME)
-})
+});
 /** --------------------------- */
 
 
