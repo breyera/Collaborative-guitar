@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Philosophy Quiz</title>
     
+    <style>
+        body{
+            background-color: black;
+        }
+    </style>
+
     <link rel="stylesheet" href="assets/css/stars.css">
     <link rel="stylesheet" href="assets/css/tailwind.css">
 </head>
@@ -17,7 +23,7 @@
             <button id="startPageHiscore" onclick="showHiscore()">HiScores</button>
         <!-- </div> DEPRECATED -->
 
-        <div class="quiz-container" style="display: hidden;">
+        <div class="quiz-container" style="display: none;">
             <!-- <div id="quizHead">Select an answer </div> -->
             <div>
                 <h2 class="question">Question</h2>
@@ -30,7 +36,7 @@
             </div>
 
         </div>
-        <div class="results" style="display: hidden;">
+        <div class="results" style="display: none;">
 
             <!-- <div id="endScore"></div>
             <input type="text" size = "50" placeholder="Enter your name" name="playerName" id="playerName"/>
@@ -56,5 +62,11 @@
             </div>
         </div> DEPRECATED-->
     </div>
+
+
+    <script src="assets/lib/JQ/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/API.js"></script>
+    <script src="assets/js/Script.js"></script>
+    <script src="assets/js/Quiz.js"></script>
 </body>
 </html>

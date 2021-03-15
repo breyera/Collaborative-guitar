@@ -35,7 +35,7 @@ let quote;
 
 /** --------- STYLING --------- */
 const HIDE                      = "display: none;";
-const SHOW                      = "display: flex;";
+const SHOW                      = "";
 const TEXTCOLORRIGHT            = ""
 const TEXTCOLORWRONG            = ""
 /** --------------------------- */
@@ -66,16 +66,22 @@ function pickFrom(length){
 }
 
 async function loadQuote(){
+    
+    console.log("showing quoteDiv")
+    quizContainer.attr("style", "");
+
     let wrongA1;
     let wrongA2;
 
     while (quote === undefined || thisSession.includes(quote)){
-        quote = undefined; //?? await FUNCTION THAT GENERATES QUOTE OBJECT;
+        quote = undefined;
+        break; //?? await FUNCTION THAT GENERATES QUOTE OBJECT;
     }
     if(correct.includes(quote)){
         quote = undefined;
         while (quote === undefined || thisSession.includes(quote)){
-            quote = undefined; //?? await FUNCTION THAT GENERATES QUOTE OBJECT;
+            quote = undefined;
+            break; //?? await FUNCTION THAT GENERATES QUOTE OBJECT;
         }
     }
 
@@ -85,9 +91,11 @@ async function loadQuote(){
 
     while(wrongA1 === undefined || wrongA1 === quote.author){
         wrongA1 = listOfAuthors[pickFrom(listOfAuthors.length)];
+        break;
     }
     while(wrongA2 === undefined || wrongA2 === quote.author){
         wrongA2 = listOfAuthors[pickFrom(listOfAuthors.length)];
+        break;
     }
 
     questionEl.text(quote.quote); //TODO: Implement API traversal
@@ -112,6 +120,11 @@ function loadAnswer(bool) {
 }
 
 
+
+
+window.onload = async function(){
+    await loadQuote();
+};
 
 
 
