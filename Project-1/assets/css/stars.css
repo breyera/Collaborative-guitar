@@ -159,7 +159,9 @@ ul {
   .header {
     margin-left: 3rem;
   } 
-  
+  #menuToggle {
+    display: none;
+  }
   .hero {
     height: 100vh;
     width: 100%;
@@ -173,11 +175,13 @@ ul {
     margin-top: 0;
     margin-bottom: 2rem;
     padding: 2rem;
-    font-size: 3rem;
+    font-size: 4rem;
   }
   /* style word swipe  */
   h2 {
     display: block;
+    font-size: 2rem;
+    margin-top: 1rem;
   }
   .rw-wrapper {
     position: relative;
@@ -271,7 +275,7 @@ ul {
       background-repeat: no-repeat;
     }
     .my-width {
-      width: 45%;
+      width: 55%;
     }
     .boxy {
       display: block;
@@ -280,10 +284,12 @@ ul {
       border-radius: 0.25em;
       padding: 1em;
       margin-bottom: 1rem;
+      width: 55%;
     }
     .owl-slide-title {
       font-size: 1.5rem;
       margin-bottom: 1rem;
+      margin-top: 1rem;
       font-family: 'Courgette', cursive;
     }
     .owl-carousel .owl-slide {
@@ -365,7 +371,7 @@ ul {
     .button {
       border: none;
       border: 3px solid white;
-      border-radius: 20px;
+      border-radius: 5px;
       transition: all .3s;
       outline: 0;
       display: block;
@@ -374,7 +380,7 @@ ul {
       background-color: #4D83A3;
       text-align: center;
       cursor: pointer;
-      width: 40%;
+      width: 60%;
       font-weight: bold;
     }
     .button:hover {
