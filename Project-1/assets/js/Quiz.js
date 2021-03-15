@@ -48,6 +48,7 @@ answerContainer.on("click", function(e){
     if(el.tagName === "BUTTON"){
         if(el.text() === correctAuthor){
             correct.unshift(quote);
+            localStorage.setItem(localcorrectKey, json.stringify(correct));
             loadAnswer(true);
             //console.log(correct)
         }else{
