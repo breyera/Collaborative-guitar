@@ -7,9 +7,12 @@
     <title>The Unanswered Questions</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/tailwind.css">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/stars.css">
+    <link rel="stylesheet" media="only screen and (max-width: 768px)" href="./assets/css/mobilehp.css">
 
 </head>
 <body>
@@ -37,63 +40,77 @@
         </header>
     </section>
     <!-- navigation  -->
-    <header class="nav-header">
-        <nav>
-            <p class="header">UnansweredQuestions</p>
-            <ul class="menu">
+    <header class="nav-header navigation">
+        <nav class="main-nav">
+            <p class="header active">UnansweredQuestions</p>
+            <ul class="menu hidden" id="myLinks">
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./philosophers.html">Famous Philosophers</a></li>
                 <li><a href="./quiz-HTML.html">Quiz</a></li>
             </ul>
         </nav>
+        <nav id="menuToggle">
+            <div id="menuToggle">
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul id="menu">
+                  <a href="./index.html"><li>Home</li></a>
+                  <a href="./philosophers.html"><li>Famous Philosophers</li></a>
+                  <a href="./quiz-HTML.html"><li>Quiz</li></a>
+                </ul>
+              </div>
+        </nav>
     </header>
+
 </main>
 
 <!-- We are going to put these qoutes in courousel  -->
 
 <div class="owl-carousel owl-theme full-screen">
-    <div class="owl-slide flex items-center justify-center cover" style="background-image: url();">
+    <div class="owl-slide flex items-center justify-center cover" style="background-image: url(./assets/images/carousel-image3_b.jpg); opacity: 0.8;">
       <div class="container my-width">
         <div class="flex-row items-center">
           <div class="grid-cols-10 md:grid-cols-6 static">
-            <div class="owl-slide-text w-8/12">
+            <div class="owl-slide-text boxy">
               <h2 class="owl-slide-animated owl-slide-title">“The time of man’s life, a moment his soul, a whirlwind, his reputation, a vague opinion. His life is a war. What then can we help? Philosophy. And philosophy is this: to ensure that engineering is still in us without injury and without injury, and is above the pleasures and pains”</h2>
               <div class="owl-slide-animated owl-slide-subtitle mb-4">
                 &mdash; Marcus Aurelius
               </div>
-              <a class="btn btn-primary owl-slide-animated owl-slide-cta" href="#" target="_blank" role="button">See More Quotes</a>
+              <a class="button owl-slide-animated owl-slide-cta" href="#" target="_blank" role="button">See More Quotes</a>
             </div>
           </div>
         </div>
       </div>
     </div><!--/owl-slide-->
   
-    <div class="owl-slide flex items-center justify-center cover" style="background-image: url();">
+    <div class="owl-slide flex items-center justify-center cover" style="background-image: url(./assets/images/carousel-image1_b.jpg); opacity: 0.8;">
       <div class="container my-width">
         <div class="flex-row items-center">
           <div class="grid-cols-10 md:grid-cols-6 static">
-            <div class="owl-slide-text w-8/12">
+            <div class="owl-slide-text boxy">
               <h2 class="owl-slide-animated owl-slide-title">“In dealing with philosophy as it should, it does nothing else than to seek the death and state that follows”</h2>
               <div class="owl-slide-animated owl-slide-subtitle mb-3">
                 &mdash; Plato
               </div>
-              <a class="btn btn-primary owl-slide-animated owl-slide-cta" href="#" target="_blank" role="button">See Original Image</a>
+              <a class="button owl-slide-animated owl-slide-cta" href="#" target="_blank" role="button">See More Quotes</a>
             </div>
           </div>
         </div>
       </div>
     </div><!--/owl-slide-->
   
-    <div class="owl-slide flex items-center justify-center cover" style="background-image: url();">
+    <div class="owl-slide flex items-center justify-center cover" style="background-image: url(./assets/images/carousel-image2_b.jpg); opacity: 0.8;">
       <div class="container my-width">
         <div class="flex-row items-center">
           <div class="grid-cols-10 md:grid-cols-6 static">
-            <div class="owl-slide-text w-8/12">
+            <div class="owl-slide-text boxy">
               <h2 class="owl-slide-animated owl-slide-title">“To live is to suffer, to survive is to find some meaning in the suffering”</h2>
               <div class="owl-slide-animated owl-slide-subtitle mb-3">
                 &mdash; Friedrich Nietzsche
               </div>
-              <a class="btn btn-primary owl-slide-animated owl-slide-cta" href="#" target="_blank" role="button">See Original Image</a>
+              <button class="button owl-slide-animated owl-slide-cta" href="#" target="_blank" role="button">See More Quotes</button>
             </div>
           </div>
         </div>

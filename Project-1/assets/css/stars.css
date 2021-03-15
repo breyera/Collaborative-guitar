@@ -159,7 +159,9 @@ ul {
   .header {
     margin-left: 3rem;
   } 
-  
+  #menuToggle {
+    display: none;
+  }
   .hero {
     height: 100vh;
     width: 100%;
@@ -173,11 +175,13 @@ ul {
     margin-top: 0;
     margin-bottom: 2rem;
     padding: 2rem;
-    font-size: 3rem;
+    font-size: 4rem;
   }
   /* style word swipe  */
   h2 {
     display: block;
+    font-size: 2rem;
+    margin-top: 1rem;
   }
   .rw-wrapper {
     position: relative;
@@ -271,7 +275,22 @@ ul {
       background-repeat: no-repeat;
     }
     .my-width {
-      width: 60%;
+      width: 55%;
+    }
+    .boxy {
+      display: block;
+      text-align: left;
+      background-color: rgba(0, 0, 0, 0.8);
+      border-radius: 0.25em;
+      padding: 1em;
+      margin-bottom: 1rem;
+      width: 55%;
+    }
+    .owl-slide-title {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      margin-top: 1rem;
+      font-family: 'Courgette', cursive;
     }
     .owl-carousel .owl-slide {
       position: relative;
@@ -307,6 +326,9 @@ ul {
     .owl-carousel .owl-nav {
       position: absolute;
     }
+    .owl-carousel .owl-dots {
+      margin-top: 1rem;
+    }
     
     .owl-carousel .owl-dots .owl-dot,
     .owl-carousel .owl-nav [class*="owl-"]:focus {
@@ -315,13 +337,13 @@ ul {
     
     .owl-carousel .owl-dots .owl-dot span {
       background: transparent;
-      border: 1px solid var(--main-black-color);
+      border: 1px solid var(--main-white-color);
       transition: all 0.2s ease;
     }
     
     .owl-carousel .owl-dots .owl-dot:hover span,
     .owl-carousel .owl-dots .owl-dot.active span {
-      background: var(--main-black-color);
+      background: var(--main-white-color);
     }
     
     .owl-carousel .owl-nav {
@@ -345,6 +367,24 @@ ul {
     
     .owl-carousel .owl-nav [class*="owl-"]:hover {
       background: transparent;
+    }
+    .button {
+      border: none;
+      border: 3px solid white;
+      border-radius: 5px;
+      transition: all .3s;
+      outline: 0;
+      display: block;
+      padding: 8px;
+      color: #fff;
+      background-color: #4D83A3;
+      text-align: center;
+      cursor: pointer;
+      width: 60%;
+      font-weight: bold;
+    }
+    .button:hover {
+      opacity: 0.7;
     }
     
     @media screen and (max-width: 575px) {
