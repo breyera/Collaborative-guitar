@@ -1,4 +1,19 @@
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100%;
+  width: 100%;
+  font: normal 16px Arial, Helvetica, sans-serif;
+  line-height: 1.6em;
+  color: #FFF;
+  margin:0;
+  background-color: #1B2834;
+}
+
 .banner{
   background-image: url(https://c.pxhere.com/images/22/68/ac0384321b4e349f26591495a78f-1440815.jpg!d);
   background-size: cover;
@@ -76,6 +91,8 @@
     height: 20%;
     width: 20%;
   }
-
+  .hidden {
+    display: none;
+  }
 
   /* background-color:#1B2834; */
