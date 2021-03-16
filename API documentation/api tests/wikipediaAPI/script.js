@@ -5,10 +5,41 @@
 
 
 
-async function wikiPull() {
-    var response = await fetch("https://en.wikipedia.org/w/api.php?action=opensearch&format=json&search=Hampi&namespace=0&limit=10")
-    var data = await response.json()
-    return console.log(data);
+
+let searchUrl =
+  'https://en.wikipedia.org/w/api.php?action=opensearch&format=json&search=';
+let contentUrl =
+  'https://en.wikipedia.org/w/api.php?action=query&prop=revisions&origin=*&rvprop=content&format=json&titles=';
+
+
+
+async function fetchWiki() {
+  data = await fetch("https://en.wikipedia.org/w/api.php?action=opensearch&origin=*&search=plato&format=json")
+
+
+  object = await data.json();
+  searchTitle = object[1][0];
+
+  console.log(object);
+  console.log(searchTitle);
+
+  url = contentUrl + searchTitle;
+
+  console.log(url)
+
+  contentData = await fetch(url)
+
+  let x = await (contentData.json())
+  console.log(x);
+  let page = x.query.pages;
+  console.log(page);
+  let pageId = Object.keys(page)[0];
+  console.log(pageId)
+  let content = page[pageId].revisions[0]["*"]
+
+  console.log(content)
+
 
 }
 
+fetchWiki()
