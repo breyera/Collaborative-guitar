@@ -8,8 +8,7 @@
 
 let searchUrl =
   'https://en.wikipedia.org/w/api.php?action=opensearch&format=json&search=';
-let contentUrl =
-  'https://en.wikipedia.org/w/api.php?action=query&prop=revisions&origin=*&rvprop=content&format=json&titles=';
+let contentUrl = 'http://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exlimit=max&origin=*&explaintext&exintro&redirects=&titles='
 
 
 
@@ -35,7 +34,7 @@ async function fetchWiki() {
   console.log(page);
   let pageId = Object.keys(page)[0];
   console.log(pageId)
-  let content = page[pageId].revisions[0]["*"]
+  let content = page[pageId].extract
 
   console.log(content)
 
