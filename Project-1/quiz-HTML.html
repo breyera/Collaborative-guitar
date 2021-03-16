@@ -10,21 +10,32 @@
     <link rel="stylesheet" href="assets/css/quiz.css">
 </head>
 <body>
-    <header>
-        <nav>
-         <p class="header">The Unanswered Questions</p>
-         <ul class="menu">
-             <li><a href="#home">Home</a></li>
-             <li><a href="#Philospher List">Famous Philosophers</a></li>
-             <li><a href="#quiz">Quiz</a></li>
-         </ul>
-        </nav>
-     </header>
+    <!-- navigation  -->
+        <header class="nav-header navigation">
+            <nav class="main-nav">
+                <p class="header active">UnansweredQuestions</p>
+                <ul class="menu hidden" id="myLinks">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./philosophers.html">Famous Philosophers</a></li>
+                    <li><a href="./quiz-HTML.html">Quiz</a></li>
+                </ul>
+            </nav>
+            <nav id="menuToggle">
+                <div id="menuToggle">
+                    <input type="checkbox" />
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <ul id="menu">
+                      <a href="./index.html"><li>Home</li></a>
+                      <a href="./philosophers.html"><li>Famous Philosophers</li></a>
+                      <a href="./quiz-HTML.html"><li>Quiz</li></a>
+                    </ul>
+                  </div>
+            </nav>
+        </header>
+    
     <div class="container">
-
-        <div id='stars'></div>
-        <div id='stars2'></div>
-        <div id='stars3'></div>
 
         <div id="starterDiv">
             <h2>Click the "Start" button to begin the Quiz!</h2>
@@ -59,7 +70,7 @@
         <div id="gameOverButton">
             <button id="tryAgain" onclick="replayQuiz()">Try Again</button>
         </div>
-    </div>
+        </div>
     </div>
 </body>
 </html>
