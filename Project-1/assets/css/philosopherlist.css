@@ -13,24 +13,29 @@
   }
 
 .profile-cards {
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    flex-direction: column;
-    min-height: 100vh;
-    font-family: sans-serif;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-
+.philosophy-times {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: sans-serif;
+    padding-bottom: 3rem;
+}
 .box{
     width: 80%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 15px;
+    grid-row-gap: 25px;
     margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 0.25em;
+    margin-bottom: 1rem;
+    padding: 2rem 0;
   }
 .card{
     position: relative;
@@ -97,10 +102,20 @@
      text-transform: uppercase;
     } 
   
-.card .details h2 span{
-    font-weight: 500;
-    font-size: 12px;
-    color: #f38695;
+.card .details button{
+    font-size: 14px;
     display: block;
     margin-top: 5px;
+    border: none;
+    border: 3px solid white;
+    border-radius: 5px;
+    transition: all .3s;
+    outline: 0;
+    padding: .5px;
+    color: #fff;
+    background-color: #4D83A3;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
      } 
