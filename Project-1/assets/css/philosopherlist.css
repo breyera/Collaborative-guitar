@@ -11,7 +11,24 @@
     color: #FFF;
     margin:0;
   }
-
+  .banner{
+    background-image: url(https://c.pxhere.com/images/22/68/ac0384321b4e349f26591495a78f-1440815.jpg!d);
+    background-size: cover;
+    background-color: #FFF;
+    height: 200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: black;
+  }
+  .dark {
+    color: black;
+    font-weight: bolder;
+  }
+  .banner-container {
+    width: 50%;
+  }
 .profile-cards {
     background-size: cover;
     background-position: center;
@@ -25,6 +42,9 @@
     font-family: sans-serif;
     padding-bottom: 3rem;
 }
+.philosophy-times:first-child{
+  padding-top: 3rem;
+}
 .box{
     width: 80%;
     display: grid;
@@ -33,7 +53,6 @@
     grid-row-gap: 25px;
     margin: 0 auto;
     background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 0.25em;
     margin-bottom: 1rem;
     padding: 2rem 0;
   }

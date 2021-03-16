@@ -9,9 +9,38 @@
     <link rel="stylesheet" href="assets/css/tailwind.css">
     <link rel="stylesheet" href="./assets/css/philosopherlist.css">
     <link rel="stylesheet" href="assets/css/stars.css">
+    <link rel="stylesheet" media="only screen and (max-width: 768px)" href="./assets/css/mobilehp.css">
 </head>
 <body>
-
+    <!-- navigation  -->
+    <section class="banner">
+        <header class="banner-container">
+            <h1 class="banner-h1">Famous Philoso<span>phers</span></h1>
+        </header>
+    </section>
+    <header class="nav-header navigation">
+        <nav class="main-nav">
+            <p class="header active dark">UQ</p>
+            <ul class="menu hidden" id="myLinks">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./philosophers.html">Famous Philosophers</a></li>
+                <li><a href="./quiz-HTML.html">Quiz</a></li>
+            </ul>
+        </nav>
+        <nav id="menuToggle">
+            <div id="menuToggle">
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul id="menu">
+                  <a href="./index.html"><li>Home</li></a>
+                  <a href="./philosophers.html"><li>Famous Philosophers</li></a>
+                  <a href="./quiz-HTML.html"><li>Quiz</li></a>
+                </ul>
+              </div>
+        </nav>
+    </header>
 
     <!-- grid boxes of philosophers -->
     <section class="profile-cards" style="background-image: url(./assets/images/background-driedflowers.jpg); opacity: 0.8;">

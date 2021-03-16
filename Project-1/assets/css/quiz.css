@@ -25,7 +25,8 @@ body {
   color: black;
 }
 .dark {
-  color: black
+  color: black;
+  font-weight: bolder;
 }
 .banner-container {
   width: 60%;
