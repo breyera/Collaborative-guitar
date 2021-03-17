@@ -1,0 +1,58 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100%;
+  width: 100%;
+  font: normal 16px Arial, Helvetica, sans-serif;
+  line-height: 1.6em;
+  color: #FFF;
+  margin:0;
+  background-color: #0f1317;
+}
+
+.banner{
+  background-image: url(https://c.pxhere.com/images/22/68/ac0384321b4e349f26591495a78f-1440815.jpg!d);
+  background-size: cover;
+  height: 200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: black;
+}
+.dark {
+  color: black;
+  font-weight: bolder;
+}
+.banner-container {
+  width: 60%;
+}
+.container{
+  text-align: center;
+  position: relative;
+  max-width: 100%;
+  border-radius: 20px;
+  border-style: solid;
+  border-color: whitesmoke;
+  padding: 150px;
+}
+.quizTitle{
+  border-bottom: 5px solid white;
+}
+
+.buttonStart{
+  border-radius: 12px;
+  background-color: wheat;
+  color: black;
+  border: 2px solid;
+
+}
+  .hidden {
+    display: none;
+  }
+
+  /* background-color:#1B2834; */

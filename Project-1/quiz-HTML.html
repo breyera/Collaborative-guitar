@@ -4,26 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Philosophy Quiz</title>
-    
-    <style>
-        body{
-            background-color: black;
-        }
-    </style>
-
-    <link rel="stylesheet" href="assets/css/stars.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/tailwind.css">
+    <link rel="stylesheet" href="assets/css/quiz.css">
+    <link rel="stylesheet" href="assets/css/stars.css">
 </head>
 <body>
-    <div class="container">
-
-        <!-- <div id="starterDiv">
+    <!-- navigation  -->
+        <section class="banner">
+            <header class="banner-container">
+                <h1 class="banner-h1">Quote Quiz</h1>
+            </header>
+        </section>
+        <header class="nav-header navigation">
+            <nav class="main-nav">
+                <p class="header active dark">UnansweredQuestions</p>
+                <ul class="menu hidden" id="myLinks">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./philosophers.html">Famous Philosophers</a></li>
+                    <li><a href="./quiz-HTML.html">Quiz</a></li>
+                </ul>
+            </nav>
+            <nav id="menuToggle">
+                <div id="menuToggle">
+                    <input type="checkbox" />
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <ul id="menu">
+                      <a href="./index.html"><li>Home</li></a>
+                      <a href="./philosophers.html"><li>Famous Philosophers</li></a>
+                      <a href="./quiz-HTML.html"><li>Quiz</li></a>
+                    </ul>
+                  </div>
+            </nav>
+        </header>
+    
+   
+    <!-- <div id="starterDiv">
             <h2>Click the "Start" button to begin the Quiz!</h2>
             <button id="startbtn">Start Quiz</button>
             <button id="startPageHiscore" onclick="showHiscore()">HiScores</button>
         <!-- </div> DEPRECATED -->
+    <div class="container">
 
-        <div class="quiz-container" style="display: none;">
+         <!-- welcome to quiz -->
+        <div class="welcome">
+            <h3 class="quizTitle">Philosophy Quiz</h3>
+            <p>How much of philosophy do you know? Are you able to recognize which famous Philosopher said what? Give it a try!</p>
+            <div>
+                <button class="buttonStart">START QUIZ</button>
+            </div>
+
+        </div>
+
+        <div class="quiz-container hidden">
             <!-- <div id="quizHead">Select an answer </div> -->
             <div>
                 <h2 class="question">Question</h2>
@@ -36,7 +72,7 @@
             </div>
 
         </div>
-        <div class="results" style="display: none;">
+        <div class="results hidden">
 
             <!-- <div id="endScore"></div>
             <input type="text" size = "50" placeholder="Enter your name" name="playerName" id="playerName"/>
