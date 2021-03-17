@@ -10,6 +10,8 @@ const resultsContainer      = $(".results-container");
 const resultsTF             = $(".true-false") //EXPECTS A <SPAN>
 const resultsBody           = $(".results-quote");
 const resultsAuthor         = $(".results-author");
+//LOAD
+const loadingScreen         =$(".loading")
 /** --------------------------- */
 
 
@@ -31,6 +33,7 @@ if(correct === []){localStorage.setItem(localcorrectKey, JSON.stringify(correct)
 let listOfAuthors;
 let correctAuthor;
 let quote;
+let quotes;
 /** --------------------------- */
 
 /** --------- STYLING --------- */
@@ -43,18 +46,18 @@ const TEXTCOLORWRONG            = ""
 
 /** -------- LISTENERS -------- */
 answerContainer.on("click", function(e){
-    el = e.target;
-    //console.log(el.tagName);
+    let el = e.target;
+    console.log(el.tagName);
     if(el.tagName === "BUTTON"){
-        if(el.text() === correctAuthor){
+        if(el.textContent === correctAuthor){
             correct.unshift(quote);
-            localStorage.setItem(localcorrectKey, json.stringify(correct));
+            localStorage.setItem(localcorrectKey, JSON.stringify(correct));
             loadAnswer(true);
-            //console.log(correct)
+            console.log(correct)
         }else{
             incorrect.unshift(quote);
             loadAnswer(false);
-            //console.log(incorrect)
+            console.log(incorrect)
         }
     }
 });
@@ -67,44 +70,57 @@ function pickFrom(length){
 
 async function loadQuote(){
     
+    toggleLoading(true);
+
+    quotes = quotes ?? await fetchQuotes();
+    console.log(quotes)
     console.log("showing quoteDiv")
-    quizContainer.attr("style", "");
+    resultsContainer.attr("style", HIDE);
+    quizContainer.attr("style", SHOW);
 
     let wrongA1;
     let wrongA2;
 
     while (quote === undefined || thisSession.includes(quote)){
-        quote = undefined;
-        break; //?? await FUNCTION THAT GENERATES QUOTE OBJECT;
+        quote = pickFrom(quotes.length);
     }
     if(correct.includes(quote)){
         quote = undefined;
         while (quote === undefined || thisSession.includes(quote)){
-            quote = undefined;
-            break; //?? await FUNCTION THAT GENERATES QUOTE OBJECT;
+            quote = pickFrom(quotes.length);
         }
     }
 
-    correctAuthor = quote.author;
-
+    correctAuthor = quotes[quote].source;
+    listOfAuthors = ["Jean-Paul Sartre", "Marcus Aurelius", "Fyodor Dostoyevsky", "Epictetus", "Carl G. Jung", "Rumi", "Seneca", "Alan Watts", "Friedrich Nietzsche"];
     listOfAuthors = listOfAuthors //?? await (FUNCTION THAT GENERATES LIST OF AUTHORS FROM WIKIPOEDICA)
 
-    while(wrongA1 === undefined || wrongA1 === quote.author){
+    while(wrongA1 === undefined || wrongA1 === quotes[quote].source){
         wrongA1 = listOfAuthors[pickFrom(listOfAuthors.length)];
-        break;
     }
-    while(wrongA2 === undefined || wrongA2 === quote.author){
+    while(wrongA2 === undefined || wrongA2 === quotes[quote].source || wrongA2 === wrongA1){
         wrongA2 = listOfAuthors[pickFrom(listOfAuthors.length)];
-        break;
     }
 
-    questionEl.text(quote.quote); //TODO: Implement API traversal
-    answerEl.eq(0).text(quote.author)
-    answerEl.eq(1).text(wrongA1)
-    answerEl.eq(2).text(wrongA2)
+    let randEl1 = pickFrom(3);
+    let randEl2;
+    let randEl3;
+    while (randEl2 === randEl1 || randEl2 === undefined){
+        randEl2 = pickFrom(3);
+    }
+    while (randEl3 === randEl1 || randEl3 === randEl2 || randEl3 === undefined){
+        randEl3 = pickFrom(3);
+    }
 
-    thisSession.unshift(quote.quote)
 
+    questionEl.text(quotes[quote].quote); //TODO: Implement API traversal
+    answerEl.eq(randEl1).text(quotes[quote].source)
+    answerEl.eq(randEl2).text(wrongA1)
+    answerEl.eq(randEl3).text(wrongA2)
+
+    thisSession.unshift(quote)
+
+    toggleLoading(false)
 }
 
 function loadAnswer(bool) {
@@ -119,7 +135,15 @@ function loadAnswer(bool) {
 
 }
 
-
+function toggleLoading(bool){
+    if(bool){
+        quizContainer.attr("style", HIDE);
+        loadingScreen.attr("style", SHOW);
+    }else{
+        quizContainer.attr("style", SHOW);
+        loadingScreen.attr("style", HIDE);
+    }
+}
 
 
 window.onload = async function(){
