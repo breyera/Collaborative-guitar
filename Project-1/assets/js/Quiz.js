@@ -50,7 +50,7 @@ answerContainer.on("click", function(e){
     console.log(el.tagName);
     if(el.tagName === "BUTTON"){
         if(el.textContent === correctAuthor){
-            correct.unshift(quote);
+            if(!correct.includes(quote)){correct.unshift(quote);}
             localStorage.setItem(localcorrectKey, JSON.stringify(correct));
             loadAnswer(true);
             console.log(correct)
@@ -60,6 +60,8 @@ answerContainer.on("click", function(e){
             console.log(incorrect)
         }
     }
+    if(thisSession.length === quotes.length){thisSession = []}
+    if(correct.length === quotes.length){correct = []; localStorage.setItem(localcorrectKey, JSON.stringify([]));}
 });
 /** --------------------------- */
 
@@ -74,7 +76,7 @@ async function loadQuote(){
 
     quotes = quotes ?? await fetchQuotes();
     console.log(quotes)
-    console.log("showing quoteDiv")
+    // console.log("showing quoteDiv")
     resultsContainer.attr("style", HIDE);
     quizContainer.attr("style", SHOW);
 
