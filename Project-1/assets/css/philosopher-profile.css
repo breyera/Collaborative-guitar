@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    height: 100%;
+    width: 100%;
+    font: normal 16px Arial, Helvetica, sans-serif;
+    line-height: 1.6em;
+    color: #FFF;
+    margin:0;
+  }
+  .banner{
+    background-image: url(https://c.pxhere.com/images/22/68/ac0384321b4e349f26591495a78f-1440815.jpg!d);
+    background-size: cover;
+    background-color: #FFF;
+    height: 200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: black;
+  }
+  .dark {
+    color: black;
+    font-weight: bolder;
+  }
+  .banner-container {
+    width: 50%;
+  }
+
+  main {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+  }
+  .profile {
+    font-family: sans-serif;
+    padding-bottom: 3rem;
+    }
+.profile:first-child{
+  padding-top: 3rem;
+}
+  .profile-container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    padding: 2rem 0;
+    justify-content: center;
+  }
+  .profile-body {
+      margin: 0 5rem;
+      display: flex;
+      flex-direction: column;
+  }
+  .profile-body .video {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .profile-header {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+    padding: 1rem 0;
+}
+.profile-header div {
+    display: block;
+}
+.profile-header img {
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+}
+.profile-header .profile-name {
+    padding-left: .5rem;
+}
+.profile-name h1 {
+    margin-bottom: 0;
+    font-weight: normal;
+    padding-left: 1rem;
+    padding-bottom: 0;
+}
+button {
+    display: block;
+    margin-top: 5px;
+    border: 3px solid #FFF;
+    border-radius: 5px;
+    transition: all .3s;
+    padding: .5rem;
+    color: #FFF;
+    background-color: #4D83A3;
+    text-align: center;
+    cursor: pointer;
+    width: 12%;
+    font-weight: bold;
+}
+button:hover {
+    opacity: 0.7;
+}
