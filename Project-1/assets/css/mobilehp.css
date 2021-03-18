@@ -184,3 +184,38 @@ h1 {
 .container {
   padding-bottom: 0;
 }
+
+.profile-container {
+  width: 85%;
+}
+.profile-body {
+  margin: 0;
+}
+.philosopher-name {
+  padding-bottom: 0.5rem;
+}
+.video {
+  margin: 1rem;
+}
+.video iframe {
+  padding: 0 2rem;
+  height: 250px;
+}
+.profile-summary {
+  flex-direction: column;
+  padding-top: 1.5rem;
+  align-items: center;
+}
+.profile-summary img {
+  height: 240px;
+  width: 210px;
+}
+.profile-content {
+  padding: 1rem 1rem 0;
+}
+.philosopher-more {
+  padding-top: 1rem;
+}
+.philosopher-more button {
+  width: 50%;
+}
