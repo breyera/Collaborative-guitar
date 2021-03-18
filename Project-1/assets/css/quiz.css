@@ -60,10 +60,10 @@ body {
 
 .buttonStart{
   border-radius: 12px;
-  background-color: wheat;
+  background-color: rgb(245, 217, 166);
   color: black;
   border: 2px solid;
-
+  padding: 8px;
 }
   .hidden {
     display: none;
