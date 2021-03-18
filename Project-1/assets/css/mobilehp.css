@@ -186,3 +186,15 @@ h1 {
 .box {
   border-radius: 0;
 }
+
+/* <-----quiz mobile-----> */
+
+.welcome{
+  width: 80%;
+  position: absolute;
+  left: 10%;
+}
+.container{
+  padding-bottom: 0;
+}
+
