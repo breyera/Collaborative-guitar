@@ -44,9 +44,11 @@ body {
   border-radius: 20px;
   text-align: center;
   position: relative;
+  bottom: 100px;
   max-width: 100%;
   padding: 2rem;
   font-family: halkduster, fantasy;
+  font-size: x-large;
 }
 .quizTitle{
   border-bottom: 2px solid white;
