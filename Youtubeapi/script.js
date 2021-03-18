@@ -9,13 +9,13 @@ $(document).ready(function(){
       
       function getRequest(searchTerm){
         var params = {
-          "q": "searchTerm",
-          "part": "snippet",
-          "type": "video",
-          "embedded": "true",
-          "order": "relevance",
-          "maxResults": 1,
-          "key": "AIzaSyA-PERyp6RWtIztoWvv4dynZlpds03hj-o"
+          part: "snippet",
+          type: "video",
+          embedded: "true",
+          order: "relevance",
+          maxResults: 1,
+          key: "AIzaSyA-PERyp6RWtIztoWvv4dynZlpds03hj-o",
+          q: searchTerm,
         }
         url = "https://www.googleapis.com/youtube/v3/search";
       
