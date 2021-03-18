@@ -12,6 +12,7 @@ $(document).ready(function(){
           "q": "searchTerm",
           "part": 'snippet',
           "type": 'video',
+          "embedded": 'true',
           "key": 'AIzaSyA-PERyp6RWtIztoWvv4dynZlpds03hj-o'
         }
         url = 'https://www.googleapis.com/youtube/v3/search';
