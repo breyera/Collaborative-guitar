@@ -63,7 +63,7 @@
   }
   .profile-summary {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     flex-direction: row;
     position: relative;
     padding: 2.5rem 0 0;
