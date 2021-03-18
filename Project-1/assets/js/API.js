@@ -1,8 +1,8 @@
 
 /** DICTIONARY */
-async function grabCords() {
+async function grabDef() {
 
-    var cordResponse = await fetch("https://wordsapiv1.p.rapidapi.com/words/realism/definitions", {
+    var defResponse = await fetch("https://wordsapiv1.p.rapidapi.com/words/realism/definitions", {
         "method": "GET",
         "headers": {
             "x-rapidapi-key": "8708740722msh9c93ea5a1d1cf20p1f2401jsn8c36f2550bd0",
@@ -10,7 +10,7 @@ async function grabCords() {
         }
     })
 
-    var whatever = await cordResponse.json()
+    var whatever = await defResponse.json()
 
     console.log(whatever.definitions[1].definition)
 
@@ -24,27 +24,27 @@ async function fetchQuotes() {
 }
 
 
-let searchUrl ='https://en.wikipedia.org/w/api.php?action=opensearch&format=json&search=';
+let searchUrl = 'https://en.wikipedia.org/w/api.php?action=opensearch&format=json&search=';
 let contentUrl = 'http://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exlimit=max&origin=*&explaintext&exintro&redirects=&titles='
 let sidebarUrl = 'https://en.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=content&rvsection=0&origin=*&format=json&titles='
 
 
 /** WIKIPOEDICA */
 async function fetchWiki(philo) {
-  data = await fetch(`https://en.wikipedia.org/w/api.php?action=opensearch&origin=*&search=${philo}&format=json`);
+    data = await fetch(`https://en.wikipedia.org/w/api.php?action=opensearch&origin=*&search=${philo}&format=json`);
 
 
-  object = await data.json();
-  searchTitle = object[1][0];
+    object = await data.json();
+    searchTitle = object[1][0];
 
-  //console.log(object);
-  //console.log(searchTitle);
+    //console.log(object);
+    //console.log(searchTitle);
 
-  url = contentUrl + searchTitle;
+    url = contentUrl + searchTitle;
 
-  //console.log(url)
+    //console.log(url)
 
-  contentData = await fetch(url);
+    contentData = await fetch(url);
 
   let x = await contentData.json();
   //console.log(x);
