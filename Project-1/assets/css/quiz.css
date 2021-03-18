@@ -11,7 +11,6 @@ body {
   line-height: 1.6em;
   color: #FFF;
   margin:0;
-  background-color: #0f1317;
 }
 
 .banner{
@@ -32,27 +31,50 @@ body {
   width: 60%;
 }
 .container{
+  background-size: cover;
+  background-attachment: fixed;
+<<<<<<< HEAD
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+=======
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.quiz-content {
+  height: 100%;
+  width: 100%;
+>>>>>>> a715a1f0edb1b0aa309d9bad2d84c08ccdd065a4
+  padding: 300px;
+}
+.welcome {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 20px;
   text-align: center;
   position: relative;
+  bottom: 100px;
   max-width: 100%;
-  border-radius: 20px;
-  border-style: solid;
-  border-color: whitesmoke;
-  padding: 150px;
+  padding: 2rem;
+  font-family: halkduster, fantasy;
+  font-size: x-large;
 }
 .quizTitle{
-  border-bottom: 5px solid white;
+  border-bottom: 2px solid white;
+  padding-bottom: 1rem;
+}
+.startQuestion{
+  padding: 1rem;
 }
 
 .buttonStart{
   border-radius: 12px;
-  background-color: wheat;
+  background-color: rgb(245, 217, 166);
   color: black;
   border: 2px solid;
-
+  padding: 8px;
 }
   .hidden {
     display: none;
   }
 
-  /* background-color:#1B2834; */
