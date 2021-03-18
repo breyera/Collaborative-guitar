@@ -6,7 +6,7 @@
     <title>Philosophy Quiz</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/tailwind.css">
+    <!-- <link rel="stylesheet" href="assets/css/tailwind.css"> -->
     <link rel="stylesheet" href="assets/css/quiz.css">
     <link rel="stylesheet" href="assets/css/stars.css">
 </head>
@@ -47,42 +47,44 @@
             <button id="startbtn">Start Quiz</button>
             <button id="startPageHiscore" onclick="showHiscore()">HiScores</button>
         <!-- </div> DEPRECATED -->
-    <div class="container">
+    <section class="container" style="background-image: url(./assets/images/background-wheat.jpg);">
+        <div class="quiz-content">
 
-         <!-- welcome to quiz -->
-        <div class="welcome">
-            <h3 class="quizTitle">Philosophy Quiz</h3>
-            <p>How much of philosophy do you know? Are you able to recognize which famous Philosopher said what? Give it a try!</p>
-            <div>
-                <button class="buttonStart">START QUIZ</button>
+            <!-- welcome to quiz -->
+            <div class="welcome">
+                <h3 class="quizTitle">Philosophy Quiz</h3>
+                <p class="startQuestion">How much of philosophy do you know? Are you able to recognize which famous Philosopher said what? Give it a try!</p>
+                <div>
+                    <button class="buttonStart">START QUIZ</button>
+                </div>
+
             </div>
 
-        </div>
+            <div class="quiz-container hidden">
+                <!-- <div id="quizHead">Select an answer </div> -->
+                <div>
+                    <h2 class="question">Question</h2>
+                </div>
+                <div class="answers">
+                    <button class="answer">A</button>
+                    <button class="answer">B</button>
+                    <button class="answer">C</button>
+                    <button class="answer">D</button>
+                </div>
 
-        <div class="quiz-container hidden">
-            <!-- <div id="quizHead">Select an answer </div> -->
-            <div>
-                <h2 class="question">Question</h2>
             </div>
-            <div class="answers">
-                <button class="answer">A</button>
-                <button class="answer">B</button>
-                <button class="answer">C</button>
-                <button class="answer">D</button>
+            <div class="results hidden">
+
+                <!-- <div id="endScore"></div>
+                <input type="text" size = "50" placeholder="Enter your name" name="playerName" id="playerName"/>
+                <button id="submit">Submit Score</button> DEPRECATED SCORES-->
+                <h2> 
+                    <span class="true-false">Correct!</span>
+                    <span class="results-quote">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus odit saepe cum</span>
+                </h2>
+                <h2 class="results-author"></h2>
+                <h2>Try Another...</h2>
             </div>
-
-        </div>
-        <div class="results hidden">
-
-            <!-- <div id="endScore"></div>
-            <input type="text" size = "50" placeholder="Enter your name" name="playerName" id="playerName"/>
-            <button id="submit">Submit Score</button> DEPRECATED SCORES-->
-            <h2> 
-                <span class="true-false">Correct!</span>
-                <span class="results-quote">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus odit saepe cum</span>
-            </h2>
-            <h2 class="results-author"></h2>
-            <h2>Try Another...</h2>
         </div>
         <!-- <div id=hiscoreContainer>
             <div id="hiscoreDiv">
@@ -97,7 +99,7 @@
                 <button id="tryAgain" onclick="replayQuiz()">Try Again</button>
             </div>
         </div> DEPRECATED-->
-    </div>
+    </section>
 
 
     <script src="assets/lib/JQ/jquery-3.6.0.min.js"></script>
