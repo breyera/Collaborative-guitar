@@ -64,7 +64,16 @@ body {
 }
 .about-philosopher {
   text-align: center;
-  padding-top: 1rem;
+  padding-top: 1rem 1rem 0;
+  display: flex;
+  flex-direction: row;
+}
+.about-philosopher::before,
+.about-philosopher::after {
+  content: "";
+  flex: 1 1;
+  border-bottom: 2px solid #fff;
+  margin: auto 1rem;
 }
 .profile-summary {
   display: flex;
