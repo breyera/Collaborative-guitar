@@ -13,6 +13,8 @@ $(document).ready(function(){
           "part": "snippet",
           "type": "video",
           "embedded": "true",
+          "order": "relevance",
+          "maxResults": 1,
           "key": "AIzaSyA-PERyp6RWtIztoWvv4dynZlpds03hj-o"
         }
         url = "https://www.googleapis.com/youtube/v3/search";
