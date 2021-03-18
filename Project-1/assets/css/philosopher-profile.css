@@ -43,7 +43,6 @@ body {
 .profile:first-child {
   padding-top: 3rem;
 }
-<<<<<<< HEAD
 .profile-container {
   width: 60%;
   margin: 0 auto;
@@ -63,39 +62,15 @@ body {
   justify-content: center;
   align-items: center;
 }
+.about-philosopher {
+  text-align: center;
+  padding-top: 1rem;
+}
 .profile-summary {
   display: flex;
-  align-items: center;
   flex-direction: row;
   position: relative;
-  padding: 2.5rem 0 0;
-=======
-  .profile-container {
-    width: 60%;
-    margin: 0 auto;
-    background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 5px;
-    margin-bottom: 1rem;
-    padding: 2rem 0;
-    justify-content: center;
-  }
-  .profile-body {
-      margin: 0 5rem;
-      display: flex;
-      flex-direction: column;
-  }
-  .profile-body .video {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  }
-  .profile-summary {
-    display: flex;
-    /* align-items: center; */
-    flex-direction: row;
-    position: relative;
-    padding: 2.5rem 0 0;
->>>>>>> 1f4b24eb0d5eb3546a3a086ae731e260a01c6478
+  padding: 1.5rem 0 0;
 }
 .profile-content div {
   display: block;
@@ -123,7 +98,7 @@ button {
   background-color: #4d83a3;
   text-align: center;
   cursor: pointer;
-  width: 40%;
+  width: 30%;
   font-weight: bold;
 }
 button:hover {
