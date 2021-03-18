@@ -1,8 +1,8 @@
 
 /** DICTIONARY */
-async function grabCords() {
+async function grabDef() {
 
-    var cordResponse = await fetch("https://wordsapiv1.p.rapidapi.com/words/realism/definitions", {
+    var defResponse = await fetch("https://wordsapiv1.p.rapidapi.com/words/realism/definitions", {
         "method": "GET",
         "headers": {
             "x-rapidapi-key": "8708740722msh9c93ea5a1d1cf20p1f2401jsn8c36f2550bd0",
@@ -10,7 +10,7 @@ async function grabCords() {
         }
     })
 
-    var whatever = await cordResponse.json()
+    var whatever = await defResponse.json()
 
     console.log(whatever.definitions[1].definition)
 
