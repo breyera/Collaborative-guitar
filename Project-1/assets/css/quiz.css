@@ -32,6 +32,19 @@ body {
   width: 60%;
 }
 .container{
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.quiz-content {
+  height: 100%;
+  width: 100%;
+  padding: 300px;
+}
+.welcome {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 20px;
   text-align: center;
   position: relative;
   max-width: 100%;
