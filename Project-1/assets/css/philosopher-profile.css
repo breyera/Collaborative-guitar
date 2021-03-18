@@ -44,7 +44,7 @@
   padding-top: 3rem;
 }
   .profile-container {
-    width: 80%;
+    width: 60%;
     margin: 0 auto;
     background-color: rgba(0, 0, 0, 0.8);
     border-radius: 5px;
@@ -62,29 +62,27 @@
       justify-content: center;
       align-items: center;
   }
-  .profile-header {
+  .profile-summary {
     display: flex;
     align-items: center;
     flex-direction: row;
     position: relative;
-    padding: 1rem 0;
+    padding: 2.5rem 0 0;
 }
-.profile-header div {
+.profile-content div {
     display: block;
 }
-.profile-header img {
+.profile-summary img {
     border-radius: 10px;
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 250px;
 }
-.profile-header .profile-name {
-    padding-left: .5rem;
+.profile-content{
+    padding-left: 1.5rem;
 }
-.profile-name h1 {
-    margin-bottom: 0;
-    font-weight: normal;
-    padding-left: 1rem;
-    padding-bottom: 0;
+.philosopher-name {
+  text-align: center;
+  margin-bottom: 0.5rem;
 }
 button {
     display: block;
@@ -97,7 +95,7 @@ button {
     background-color: #4D83A3;
     text-align: center;
     cursor: pointer;
-    width: 12%;
+    width: 20%;
     font-weight: bold;
 }
 button:hover {
