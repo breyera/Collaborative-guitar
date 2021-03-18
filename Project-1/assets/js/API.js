@@ -65,6 +65,7 @@ var trimString = str => str.replace(/\((.*?)\)/g, "").replace("  ", " ").replace
 /** YOUTUBE */
 
 var googleApiKey = "AIzaSyBWH8ojYF9YRbijUhlBQeCjuLtH6SQTIzQ"
+var clientId = "376740781080-3rkfok951mci2hnsstorqsfk3pqdjd8n.apps.googleusercontent.com"
 var searchTerm = ""
 
 //<script src="https://apis.google.com/js/api.js"></script>
