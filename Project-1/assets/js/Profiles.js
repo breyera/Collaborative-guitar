@@ -1,5 +1,5 @@
 const philoIMG = $(".profile-img");
-const philoName = $(".profile-name");
+const philoName = $("#philosopher-name");
 const philoBlurb = $("#philosopher-about");
 const philoBirth = $("#philosopher-birth");
 const philoDeath = $("#philosopher-death");
@@ -59,5 +59,5 @@ readMoreButts.on("click", function(e){
 
 window.onload = function(){
     let query = window.location.search.replace("\?", "")
-    loadProfile(query ? query : "Adam Yaunch");
+    loadProfile(query ? query : "Adam Yauch");
 }
