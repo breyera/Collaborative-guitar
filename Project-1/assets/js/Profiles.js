@@ -1,4 +1,4 @@
-const philoIMG = $(".profile-img");
+const philoIMG = $("#philosopher-img");
 const philoName = $("#philosopher-name");
 const philoBlurb = $("#philosopher-about");
 const philoBirth = $("#philosopher-birth");
@@ -8,8 +8,8 @@ const readMoreButts = $("#wiki-link");
 
 async function loadProfile(name){
 
-    
-    let response = await fetchWiki(name);
+    console.log(name);
+    let response = await fetchWiki("" +name);
 
     let page = response.query.pages;
     //console.log(page);
@@ -23,31 +23,37 @@ async function loadProfile(name){
     console.log(readMoreURL);
 
     //console.log(response)
-    philoName.text(name.replace("\%20", " "));
+    parseName = name.replace(/\%20/g, " ").replace(/\%C3\%A9/g, "é")
+    philoName.text(parseName);
     //philoIMG.attr("src", function-to-get-img);
     philoBlurb.text(trimString(content));
     readMoreButts.attr("href", readMoreURL);
 
-    let asideResponse = await fetchAside(name);
+    // let asideResponse = await fetchAside(name);
 
-    console.log(asideResponse);
+    // console.log(asideResponse);
 
-    let asPage = asideResponse.query.pages;
-    let asPageId = Object.keys(asPage)[0];
-    let asContent = asPage[asPageId].revisions[0]["*"];
-    console.log(asContent);
+    // let asPage = asideResponse.query.pages;
+    // let asPageId = Object.keys(asPage)[0];
+    // let asContent = asPage[asPageId].revisions[0]["*"];
+    // console.log(asContent);
 
-    let birthDate = "" + asContent.match(/\| birth\_date(.*?)(\r\n|\r|\n)/g)
-    let deathDate = "" + asContent.match(/\| death\_date(.*?)(\r\n|\r|\n)/g)
+    // let birthDate = "" + asContent.match(/\| birth\_date(.*?)(\r\n|\r|\n)/g)
+    // let deathDate = "" + asContent.match(/\| death\_date(.*?)(\r\n|\r|\n)/g)
 
-    birthDate = birthDate.split("=")[1]
-    deathDate = deathDate.split("=")[1]
+    // birthDate = birthDate.split("= ")[1] ?? birthDate.split("=")[1];
+    // deathDate = deathDate.split("= ")[1] ?? deathDate.split("=")[1];
 
-    console.log(birthDate, "||||||||", deathDate);
+    
+    // let bDay = birthDate.match(/[0-9][0-9] [a-zA-Z]+ [0-9]+ (BC|AD)/g) ?? 
+    // birthDate.match(/[0-9][0-9] [a-zA-Z][a-zA-Z][a-zA-Z]+ [0-9]+/g)
 
-    bDay = birthDate.match(/[0-9]*/g);
-    console.log(bDay);
-    //dDay = ;
+
+    // console.log(birthDate, "||||||||", deathDate);
+
+    
+    // console.log(bDay);
+    // //dDay = ;
 
 
 }
@@ -58,6 +64,7 @@ readMoreButts.on("click", function(e){
 
 
 window.onload = function(){
-    let query = window.location.search.replace("\?", "")
-    loadProfile(query ? query : "Adam Yauch");
+    let query = window.location.search.replace("\?", "").split("&")
+    loadProfile(query[0] ? query[0] : "Adam Yauch");
+    philoIMG.attr("src", query[1])
 }
