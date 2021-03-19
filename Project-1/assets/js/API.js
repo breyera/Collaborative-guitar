@@ -75,7 +75,7 @@ async function fetchAside(philo) {
 
 }
 
-var trimString = str => str.replace(/\((.*?)\)/g, "").replace(/  /g, " ").replace(/ \,/g, ",").replace(/ \./g, ".").replace(/ \–(.*?)\)/g, "");
+var trimString = str => str.replace(/\(listen\)/g, "").replace(/\((.*?)\)/g, "").replace(/  /g, " ").replace(/ \,/g, ",").replace(/ \./g, ".").replace(/ \–(.*?)\)/g, "");
 
 
 /** YOUTUBE */
