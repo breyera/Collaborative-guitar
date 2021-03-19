@@ -115,7 +115,7 @@ async function loadQuote(){
     }
 
 
-    questionEl.text(quotes[quote].quote); //TODO: Implement API traversal
+    questionEl.text(quotes[quote].quote);
     answerEl.eq(randEl1).text(quotes[quote].source)
     answerEl.eq(randEl2).text(wrongA1)
     answerEl.eq(randEl3).text(wrongA2)
