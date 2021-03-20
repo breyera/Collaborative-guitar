@@ -18,7 +18,7 @@ async function grabDef() {
 
 /** PHILOSOPHY QUOTES */
 async function fetchQuotes() {
-    var response = await fetch('http://philosophy-quotes-api.glitch.me/quotes')
+    var response = await fetch('https://philosophy-quotes-api.glitch.me/quotes')
     var quotes = (response.json())
     return quotes
 }
