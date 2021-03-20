@@ -33,7 +33,7 @@ body {
 .container{
   background-size: cover;
     background-attachment: fixed;
-    height: 100%;
+    min-height: 100vh;
     width: 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -57,9 +57,35 @@ body {
   bottom: 100px;
   max-width: 100%;
   padding: 2rem;
-  font-family: halkduster, fantasy;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: x-large;
 }
+.question{ 
+  padding-bottom: 1rem;
+  font-size: 40px;
+}
+
+.answers{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.answers button{
+  display: block;
+  border: 2px solid;
+  border-radius: 6px;
+  background-color: white;
+  color: black;
+  padding: 6px;
+  font-size: 16px;
+  margin: 1rem;
+}
+
+.answers button:hover{
+  background-color: cadetblue;
+}
+
 .quizTitle{
   border-bottom: 2px solid white;
   padding-bottom: 1rem;
@@ -75,7 +101,21 @@ body {
   border: 2px solid;
   padding: 8px;
 }
-  /* .hidden {
+.rerun{
+  border: 2px solid;
+  border-radius: 6px;
+  background-color: white;
+  color: black;
+  padding: 8px;
+  font-size: 16px;
+  margin: 1rem;
+}
+
+.answersfirstchild{
+  padding: 8px;
+}
+
+  .hidden {
     display: none;
-  } */
+  }
 

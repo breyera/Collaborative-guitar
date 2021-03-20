@@ -136,11 +136,11 @@ function loadAnswer(bool) {
     quizContainer.attr("style", HIDE);
     resultsContainer.attr("style", SHOW);
     resultsBody.text(quotes[quote].quote);
-    resultsAuthor.text(quotes[quote].source);
+    resultsAuthor.text("-" + " " + quotes[quote].source);
     if(bool){
-        resultsTF.text("correct").attr("style", TEXTCOLORRIGHT);
+        resultsTF.text("Correct!").attr("style", TEXTCOLORRIGHT);
     }else{
-        resultsTF.text("wrong").attr("style", TEXTCOLORWRONG);
+        resultsTF.text("Wrong.").attr("style", TEXTCOLORWRONG);
     }
 
 }
