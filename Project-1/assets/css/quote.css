@@ -36,6 +36,7 @@ main {
   background-attachment: fixed;
   min-height: 100vh;
 }
+/* style quote content */
 .quote-box {
   width: 60%;
   margin: 125px auto;
