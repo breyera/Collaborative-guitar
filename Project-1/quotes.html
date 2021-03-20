@@ -5,28 +5,63 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Quotes</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/quote.css">
+    <link rel="stylesheet" href="assets/css/stars.css">
+    <link rel="stylesheet" media="only screen and (max-width: 768px)" href="./assets/css/mobilehp.css">
 </head>
 
 <body>
-    <header>
-        <nav>
-
+    <!-- navigation  -->
+    <section class="banner">
+        <header class="banner-container">
+            <h1 class="banner-h1 philosopher-name">Quotes</h1>
+        </header>
+    </section>
+    <header class="nav-header navigation">
+        <nav class="main-nav">
+            <p class="header active dark">UQ</p>
+            <ul class="menu hidden" id="myLinks">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./philosophers.html">Famous Philosophers</a></li>
+                <li><a href="./quiz-HTML.html">Quiz</a></li>
+                <li><a href="./quotes.html">Quotes</a></li>     
+            </ul>
+        </nav>
+        <nav id="menuToggle">
+            <div id="menuToggle">
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul id="menu">
+                  <a href="./index.html"><li>Home</li></a>
+                  <a href="./philosophers.html"><li>Famous Philosophers</li></a>
+                  <a href="./quiz-HTML.html"><li>Quiz</li></a>
+                  <a href="./quotes.html"><li>Quotes</li></a>
+                </ul>
+              </div>
         </nav>
     </header>
 
-    <div>
-        <button id="prev">
-            prev
-        </button>
-
-        <h2 id="current-quote"></h2>
-        <h2 id="current-author"></h2>
-
-        <button id="next">
-            next
-        </button>
-    </div>
+    <main class="quote-background" style="background-image: url(./assets/images/background-butterfly2\ -\ Copy.jpg); opacity: 0.8; border-top: 10px solid rgba(0, 0, 0, 0.8);">
+        <div class="quote-box">
+            <div class="quote-box-content">
+                <h2 id="current-quote"></h2>
+                <p id="current-author"></p>
+            </div>
+            <div class="button-quotes">
+                <button id="prev">
+                        prev
+                </button>
+                <button id="next">
+                        next
+                </button>
+            </div>
+        </div>
+    </main>
     <script src="./assets/js/API.js"></script>
     <script src="./assets/js/quoteSel.js"></script>
 </body>

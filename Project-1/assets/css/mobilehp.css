@@ -186,7 +186,8 @@ h1 {
 }
 
 /* philosopher profile mobile  */
-.profile-container {
+.profile-container,
+.quote-box {
   width: 85%;
 }
 .profile-body {
@@ -219,4 +220,15 @@ h1 {
 }
 .philosopher-more button {
   width: 50%;
+}
+
+/* style quote page  */
+.quote-box {
+  margin: 50px auto;
+}
+#current-quote {
+  font-size: 2rem;
+}
+.button-quotes button {
+  width: 25%;
 }

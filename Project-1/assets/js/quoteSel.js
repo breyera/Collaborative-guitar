@@ -32,8 +32,8 @@ prevBtn.addEventListener("click", function () {
 
 async function disQuote() {
     qArray = await fetchQuotes()
-    var currentQuote = qArray[i].quote
-    var currentAuthor = (qArray[i].source)
+    var currentQuote = ('"' + qArray[i].quote + '"')
+    var currentAuthor = ("-" + " " + qArray[i].source)
 
 
     curAuthEl.textContent = currentAuthor
