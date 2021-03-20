@@ -42,6 +42,11 @@ body {
 .quiz-content {
   height: 100%;
   width: 100%;
+  background-attachment: fixed;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
   padding: 300px;
 }
 .welcome {

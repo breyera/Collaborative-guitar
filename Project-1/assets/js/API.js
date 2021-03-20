@@ -25,7 +25,7 @@ async function fetchQuotes() {
 
 
 let searchUrl = 'https://en.wikipedia.org/w/api.php?action=opensearch&format=json&search=';
-let contentUrl = 'http://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exlimit=max&origin=*&explaintext&exintro&redirects=&titles='
+let contentUrl = 'https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exlimit=max&origin=*&explaintext&exintro&redirects=&titles='
 let sidebarUrl = 'https://en.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=content&rvsection=0&origin=*&format=json&titles='
 
 
@@ -75,7 +75,7 @@ async function fetchAside(philo) {
 
 }
 
-var trimString = str => str.replace(/\((.*?)\)/g, "").replace("  ", " ").replace(/ \,/g, ",").replace(/ \./g, ".");
+var trimString = str => str.replace(/\(listen\)/g, "").replace(/\((.*?)\)/g, "").replace(/  /g, " ").replace(/ \,/g, ",").replace(/ \./g, ".").replace(/ \–(.*?)\)/g, "");
 
 
 /** YOUTUBE */
