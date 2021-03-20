@@ -18,7 +18,7 @@ async function grabDef() {
 
 /** PHILOSOPHY QUOTES */
 async function fetchQuotes() {
-    var response = await fetch('http://philosophy-quotes-api.glitch.me/quotes')
+    var response = await fetch('https://philosophy-quotes-api.glitch.me/quotes')
     var quotes = (response.json())
     return quotes
 }
@@ -75,7 +75,7 @@ async function fetchAside(philo) {
 
 }
 
-var trimString = str => str.replace(/\((.*?)\)/g, "").replace("  ", " ").replace(/ \,/g, ",").replace(/ \./g, ".");
+var trimString = str => str.replace(/\(listen\)/g, "").replace(/\((.*?)\)/g, "").replace(/  /g, " ").replace(/ \,/g, ",").replace(/ \./g, ".").replace(/ \–(.*?)\)/g, "");
 
 
 /** YOUTUBE */
