@@ -70,6 +70,8 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 20px;
+
 }
 .answers button{
   display: block;
@@ -79,7 +81,7 @@ body {
   color: black;
   padding: 6px;
   font-size: 16px;
-  margin: 1rem;
+  margin: 8px;
 }
 
 .answers button:hover{
