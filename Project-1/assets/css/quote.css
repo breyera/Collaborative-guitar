@@ -36,3 +36,10 @@ main {
   background-attachment: fixed;
   min-height: 100vh;
 }
+.quote-box {
+  width: 60%;
+  margin: 175px auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+  padding: 2rem 0;
+}
