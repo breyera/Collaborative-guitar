@@ -1,15 +1,13 @@
 
-
-
-
 function getRequest(searchTerm) {
   var params = {
     part: "snippet",
     type: "video",
-    embedded: "true",
+    videoSyndicated: "true",
     order: "relevance",
     maxResults: 1,
-    key: "AIzaSyA-PERyp6RWtIztoWvv4dynZlpds03hj-o",
+    // key: "AIzaSyA-PERyp6RWtIztoWvv4dynZlpds03hj-o",
+    key: "AIzaSyBWH8ojYF9YRbijUhlBQeCjuLtH6SQTIzQ",
     q: searchTerm,
     safeSearch: "none",
   }
@@ -22,23 +20,15 @@ function getRequest(searchTerm) {
   })
 }
 
+
 function showResults(results) {
   var html = "";
-
-  $.each(results, function (index, value) {
-    html += "<p>" + value.snippet.thumbnails.high.url + "</p>" + "<p>" + "https://www.youtube.com/watch?v=" + value.id.videoId + "</p>" + "<hr/>";
-    console.log(value.snippet.thumbnails.high.url);
-    console.log(value.id.videoId);
-    var videoId = value.id.videoId
-    console.log(videoId)
-    var newSrc = "https://www.youtube.com/embed/" + videoId
-    $("iframe").attr("src", newSrc)
-  })
+  console.log(results[0]);
+  console.log(results[0].id.videoId);
+  var videoId = results[0].id.videoId
+  console.log(videoId)
+  var newSrc = "https://www.youtube.com/embed/" + videoId
+  $("iframe").attr("src", newSrc);
+  $(".video").attr("style", "");
 
 }
-
-
-
-
-
-

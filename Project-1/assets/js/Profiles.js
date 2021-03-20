@@ -63,9 +63,9 @@ readMoreButts.on("click", function (e) {
 })
 
 
-window.onload = function () {
-    let query = window.location.search.replace("\?", "").split("&")
-    loadProfile(query[0] ? query[0] : "Adam Yauch");
-    philoIMG.attr("src", query[1])
-    getRequest(query[0] + " philosophy")
+window.onload = async function () {
+    let query = window.location.search.replace("\?", "").split("&");
+    await loadProfile(query[0] ? query[0] : "Adam Yauch");
+    philoIMG.attr("src", query[1]);
+    getRequest(query[0].replace(/\%20/g, " ").replace(/\%C3\%A9/g, "é") + " philosophy");
 }
