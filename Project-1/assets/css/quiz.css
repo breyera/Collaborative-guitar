@@ -32,20 +32,16 @@ body {
 }
 .container{
   background-size: cover;
-  background-attachment: fixed;
-<<<<<<< HEAD
-  height: 100%;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-=======
-  background-repeat: no-repeat;
-  background-position: center;
+    background-attachment: fixed;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 300px;
 }
 .quiz-content {
   height: 100%;
   width: 100%;
->>>>>>> a715a1f0edb1b0aa309d9bad2d84c08ccdd065a4
   padding: 300px;
 }
 .welcome {
@@ -74,7 +70,7 @@ body {
   border: 2px solid;
   padding: 8px;
 }
-  .hidden {
+  /* .hidden {
     display: none;
-  }
+  } */
 
