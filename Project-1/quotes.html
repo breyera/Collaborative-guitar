@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/quote.css">
     <link rel="stylesheet" href="assets/css/stars.css">
     <link rel="stylesheet" media="only screen and (max-width: 768px)" href="./assets/css/mobilehp.css">
@@ -42,18 +44,20 @@
         </nav>
     </header>
 
-    <main class="quote-background" style="background-image: url(./assets/images/background-butterfly2.jpg); opacity: 0.8; border-top: 10px solid rgba(0, 0, 0, 0.8);">
+    <main class="quote-background" style="background-image: url(./assets/images/background-butterfly2\ -\ Copy.jpg); opacity: 0.8; border-top: 10px solid rgba(0, 0, 0, 0.8);">
         <div class="quote-box">
-            <button id="prev">
-                prev
-            </button>
-
-            <h2 id="current-quote"></h2>
-            <h2 id="current-author"></h2>
-
-            <button id="next">
-                next
-            </button>
+            <div class="quote-box-content">
+                <h2 id="current-quote"></h2>
+                <p id="current-author"></p>
+            </div>
+            <div class="button-quotes">
+                <button id="prev">
+                        prev
+                </button>
+                <button id="next">
+                        next
+                </button>
+            </div>
         </div>
     </main>
     <script src="./assets/js/API.js"></script>
