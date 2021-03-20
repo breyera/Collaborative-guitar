@@ -10,8 +10,13 @@ const resultsContainer      = $(".results-container");
 const resultsTF             = $(".true-false") //EXPECTS A <SPAN>
 const resultsBody           = $(".results-quote");
 const resultsAuthor         = $(".results-author");
+const rerunButton           = $(".rerun")
 //LOAD
 const loadingScreen         =$(".loading")
+//WELCOME
+const startButton           =$(".buttonStart")
+const welcomeScreen         =$(".welcome")
+
 /** --------------------------- */
 
 
@@ -77,6 +82,7 @@ async function loadQuote(){
     quotes = quotes ?? await fetchQuotes();
     console.log(quotes)
     // console.log("showing quoteDiv")
+    welcomeScreen.attr("style", HIDE)
     resultsContainer.attr("style", HIDE);
     quizContainer.attr("style", SHOW);
 
@@ -115,7 +121,7 @@ async function loadQuote(){
     }
 
 
-    questionEl.text(quotes[quote].quote); //TODO: Implement API traversal
+    questionEl.text(quotes[quote].quote);
     answerEl.eq(randEl1).text(quotes[quote].source)
     answerEl.eq(randEl2).text(wrongA1)
     answerEl.eq(randEl3).text(wrongA2)
@@ -129,6 +135,8 @@ function loadAnswer(bool) {
 
     quizContainer.attr("style", HIDE);
     resultsContainer.attr("style", SHOW);
+    resultsBody.text(quotes[quote].quote);
+    resultsAuthor.text(quotes[quote].source);
     if(bool){
         resultsTF.text("correct").attr("style", TEXTCOLORRIGHT);
     }else{
@@ -148,11 +156,12 @@ function toggleLoading(bool){
 }
 
 
-window.onload = async function(){
-    await loadQuote();
-};
+startButton.on("click", function(){
+    loadQuote();
+})
 
-
-
+rerunButton.on("click", function(){
+    loadQuote();
+})
 
 
