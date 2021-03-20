@@ -6,10 +6,10 @@ const philoDeath = $("#philosopher-death");
 const readMoreButts = $("#wiki-link");
 
 
-async function loadProfile(name){
+async function loadProfile(name) {
 
     console.log(name);
-    let response = await fetchWiki("" +name);
+    let response = await fetchWiki("" + name);
 
     let page = response.query.pages;
     //console.log(page);
@@ -44,27 +44,28 @@ async function loadProfile(name){
     // birthDate = birthDate.split("= ")[1] ?? birthDate.split("=")[1];
     // deathDate = deathDate.split("= ")[1] ?? deathDate.split("=")[1];
 
-    
+
     // let bDay = birthDate.match(/[0-9][0-9] [a-zA-Z]+ [0-9]+ (BC|AD)/g) ?? 
     // birthDate.match(/[0-9][0-9] [a-zA-Z][a-zA-Z][a-zA-Z]+ [0-9]+/g)
 
 
     // console.log(birthDate, "||||||||", deathDate);
 
-    
+
     // console.log(bDay);
     // //dDay = ;
 
 
 }
 
-readMoreButts.on("click", function(e){
+readMoreButts.on("click", function (e) {
     window.open(this.getAttribute("href"))
 })
 
 
-window.onload = function(){
-    let query = window.location.search.replace("\?", "").split("&")
-    loadProfile(query[0] ? query[0] : "Adam Yauch");
-    philoIMG.attr("src", query[1])
+window.onload = async function () {
+    let query = window.location.search.replace("\?", "").split("&");
+    await loadProfile(query[0] ? query[0] : "Adam Yauch");
+    philoIMG.attr("src", query[1]);
+    getRequest(query[0].replace(/\%20/g, " ").replace(/\%C3\%A9/g, "é") + " philosophy");
 }
