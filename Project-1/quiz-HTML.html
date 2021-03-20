@@ -25,6 +25,7 @@
                     <li><a href="./index.html">Home</a></li>
                     <li><a href="./philosophers.html">Famous Philosophers</a></li>
                     <li><a href="./quiz-HTML.html">Quiz</a></li>
+                    <li><a href="./quotes.html">Quotes</a></li>
                 </ul>
             </nav>
             <nav id="menuToggle">
@@ -37,6 +38,7 @@
                       <a href="./index.html"><li>Home</li></a>
                       <a href="./philosophers.html"><li>Famous Philosophers</li></a>
                       <a href="./quiz-HTML.html"><li>Quiz</li></a>
+                      <a href="./quotes.html"><li>Quotes</li></a>
                     </ul>
                   </div>
             </nav>
@@ -48,7 +50,7 @@
             <button id="startbtn">Start Quiz</button>
             <button id="startPageHiscore" onclick="showHiscore()">HiScores</button>
         <!-- </div> DEPRECATED -->
-    <section class="container" style="background-image: url(https://c.pxhere.com/photos/05/47/sunset_scenic_sky_sun_summer_nature_light_scenery-750094.jpg!d);">
+    <section class="container" style="background-image: url(https://c.pxhere.com/photos/05/47/sunset_scenic_sky_sun_summer_nature_light_scenery-750094.jpg!d); border-top: 10px solid rgba(0, 0, 0, 0.8);">
 
          <!-- welcome to quiz -->
         <div class="welcome">
@@ -61,7 +63,7 @@
         <div class="welcome quiz-container" style="display: none;">
             <!-- <div id="quizHead">Select an answer </div> -->
             <div>
-                <h2 class="question">Question</h2>
+                <q class="question">Question</q>
             </div>
             <div class="answers">
                 <button class="answer">A</button>
@@ -70,31 +72,17 @@
             </div>
 
         </div>
+        <!-- was question right or wrong -->
         <div class="welcome results results-container" style="display: none;">
 
-            <!-- <div id="endScore"></div>
-            <input type="text" size = "50" placeholder="Enter your name" name="playerName" id="playerName"/>
-            <button id="submit">Submit Score</button> DEPRECATED SCORES-->
             <h2> 
                 <span class="true-false">Correct!</span>
-                <span class="results-quote">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus odit saepe cum</span>
+                <q class="results-quote">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus odit saepe cum</q>
             </h2>
             <h2 class="results-author"></h2>
-            <h2 class="rerun">Try Another...</h2>
+            <button class="rerun">Try Another...</button>
         </div>
-        <!-- <div id=hiscoreContainer>
-            <div id="hiscoreDiv">
-                <div id="hiscore-header">
-                    <h3>Player Name</h3>
-                    <h3>Score</h3>
-                </div>
-                <div id = "hiscoreIntl"></div>
-                <div id = "hiscoreShownScore"></div>
-            </div>
-            <div id="gameOverButton">
-                <button id="tryAgain" onclick="replayQuiz()">Try Again</button>
-            </div>
-        </div> DEPRECATED-->
+
     </section>
 
 
