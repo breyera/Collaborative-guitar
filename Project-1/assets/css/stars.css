@@ -703,7 +703,7 @@ h2 {
 .rw-words-1 span {
   position: absolute;
   opacity: 0;
-  overflow: hidden;
+  /* overflow: hidden; */
   color: #6b969d;
   -webkit-animation: rotateWord 18s linear infinite 0s;
   -ms-animation: rotateWord 18s linear infinite 0s;
