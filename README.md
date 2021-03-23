@@ -12,7 +12,7 @@ This project was about coalescing all of what we have learned so far in the boot
 
 ---
 
-[![screenshot of homepage](./gitAssets/mainPage.png)](https://zacharyeggert.github.io/Collaborative-guitar/)
+[![screenshot of homepage](./gitAssets/mainPage.png)](https://breyera.github.io/unanswered-questions/)
 
 ---
 
@@ -37,4 +37,4 @@ Using these tools we were able to make multiple interactive elements, a click-th
 
 Images pulled from [WallpaperBetter](https://www.wallpaperbetter.com/)
 
-[Link to deployed site](https://zacharyeggert.github.io/Collaborative-guitar/)
+[Link to deployed site](https://breyera.github.io/unanswered-questions/)
